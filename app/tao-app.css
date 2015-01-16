@@ -3,11 +3,10 @@ body > div { width: 100%; height: 100%; height: 100vh; padding-top: 30px; }
 
 ul { list-style: none; margin: 0; padding: 0; }
 
-.mandala-wrapper { position: relative; }
-.maldala-mask { width: 90px; height: 90px; margin: 0 auto; -webkit-mask-box-image: url("img/mandala-mask.svg"); }
-.mandala-wrapper strong { position: absolute; top: 50%; left: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px; font-size: 15px; font-family: 'Ovo'; line-height: 20px; text-align: center; color: #d95e78; }
+.mandala-wrapper { position: relative; width: 90px; height: 90px; margin: 0 auto; }
+.mandala-wrapper strong { position: absolute; top: 0; left: 0; width: 90px; height: 90px; font-size: 15px; font-family: 'Ovo'; line-height: 90px; text-align: center; color: #d95e78; }
 
-.mandala { margin: 0 auto 30px auto; padding: 14px 3px 0 0; }
+.mandala { margin: 0 auto 30px auto; padding: 14px 0 0 0; }
 .mandala,
 .mandala .hexagons { position: relative; width: 60px; height: 60px; }
 .mandala h1 { margin: 0; line-height: 95px; font-size: 14px; text-align: center; z-index: 1; color: #fff9ed; }
@@ -15,7 +14,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .mandala .hexagons div { border: solid 1px transparent; }
 .mandala .hexagons div,
 .mandala .hexagons div::after { position: absolute; width: 60px; height: 60px; transition: all, .5s, ease-in; }
-.mandala .hexagons div::after { content: '\25C8'; color: #d95e78; font-size: 58px; line-height: 60px; text-align: center; opacity: .4; }
+.mandala .hexagons div::after { content: '.'; text-indent: -9999px; width: 25px; height: 25px; top: 50%; left: 50%; margin: -16px 0 0 -16px; border: solid 4px #d95e78; opacity: .4; }
 
 .mandala.active .hexagons div { border-color: #424242; }
 .mandala.active .hexagons div.two { transform: rotate(15deg); }
