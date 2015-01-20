@@ -1,14 +1,8 @@
-<!-- Menu -->
-<!-- <ul class="grid">
-    <li ng-repeat="pages in tao" ng-class="{active : isActiveItem($index)}">
-        <a ng-href="#{{$index + 1}}" ng-bind="$index + 1"></a>
-    </li>
-</ul> -->
 
 <!-- Prose -->
 <div>
     <div class="mandala-wrapper">
-        <div class="maldala-mask">
+        <div class="mandala-mask">
             <div class="mandala" 
                  ng-click="toggleActiveClass()" 
                  ng-class="{ active : activeClass }">
@@ -22,8 +16,9 @@
                     <div class="six"></div>
                 </div>
             </div>
+            
+            <strong ng-bind="activeIndex + 1" ></strong>
         </div>
-        <strong ng-bind="activeIndex + 1" ></strong>
     </div>
 
     <a class="nav back" href="" ng-click="cyclePage('previous')">Back</a>
@@ -32,3 +27,10 @@
     <!-- <h1 ng-bind="activePage"></h1> -->
     <p ng-repeat="verses in activePage.verses" ng-bind-html="verses.verse | parseHTML"></p>
 </div>
+
+<!-- Menu -->
+<!-- <ul class="grid">
+    <li ng-repeat="pages in tao" ng-class="{active : isActiveItem($index)}">
+        <a ng-href="#{{$index + 1}}" ng-bind="$index + 1"></a>
+    </li>
+</ul> -->
