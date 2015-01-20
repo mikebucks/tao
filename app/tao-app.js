@@ -4,10 +4,8 @@ angular.module('TaoApp', ['ngRoute'])
 
     'use strict';
 
-    $routeProvider.when('/', {
-        templateUrl: '/page/page.html',
-        controller: 'PageCtrl'
-    }).when('/:number', {
+    $routeProvider
+    .when('/:number', {
         templateUrl: '/page/page.html',
         controller: 'PageCtrl'
     });

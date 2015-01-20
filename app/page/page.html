@@ -26,6 +26,9 @@
         <strong ng-bind="activeIndex + 1" ></strong>
     </div>
 
+    <a class="nav back" href="" ng-click="cyclePage('previous')">Back</a>
+    <a class="nav next" href="" ng-click="cyclePage('next')">Next</a>
+
     <!-- <h1 ng-bind="activePage"></h1> -->
     <p ng-repeat="verses in activePage.verses" ng-bind-html="verses.verse | parseHTML"></p>
 </div>
