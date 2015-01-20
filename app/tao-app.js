@@ -10,7 +10,7 @@ angular.module('TaoApp', ['ngRoute'])
         controller: 'PageCtrl'
     });
 
-    // $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 
 }])
 

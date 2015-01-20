@@ -1,5 +1,5 @@
-angular.module('TaoApp').controller('PageCtrl', ['$scope', '$http', '$routeParams', '$sce',
-    function ($scope, $http, $routeParams, $sce) {
+angular.module('TaoApp').controller('PageCtrl', ['$scope', '$http', '$routeParams', '$location', '$sce',
+    function ($scope, $http, $routeParams, $location, $sce) {
         
         $scope.activeIndex = parseInt($routeParams.number) - 1 || 0;
 
@@ -8,7 +8,6 @@ angular.module('TaoApp').controller('PageCtrl', ['$scope', '$http', '$routeParam
             $scope.pages = [];
             $scope.cyclePage($scope.activeIndex);
         });
-
 
         $scope.toggleActiveClass = function () {
             $scope.activeClass = false;
@@ -34,7 +33,7 @@ angular.module('TaoApp').controller('PageCtrl', ['$scope', '$http', '$routeParam
             }
             
             $scope.activePage = $scope.tao[$scope.activeIndex];
-            // $routeParams.number = $scope.activePage + 1;
+            $location.path($scope.activeIndex + 1);
         };
 
         $scope.isActiveItem = function(index) {

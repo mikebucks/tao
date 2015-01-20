@@ -1,8 +1,9 @@
 
 <!-- Prose -->
 <div>
+    
     <div class="mandala-wrapper">
-        <div class="mandala-mask">
+        <div class="maldala-mask">
             <div class="mandala" 
                  ng-click="toggleActiveClass()" 
                  ng-class="{ active : activeClass }">
@@ -21,8 +22,8 @@
         </div>
     </div>
 
-    <a class="nav back" href="" ng-click="cyclePage('previous')">Back</a>
-    <a class="nav next" href="" ng-click="cyclePage('next')">Next</a>
+    <a class="nav back" href="" ng-click="cyclePage('previous')" ng-bind="activeIndex">Back</a>
+    <a class="nav next" href="" ng-click="cyclePage('next')" ng-bind="activeIndex + 2">Next</a>
 
     <!-- <h1 ng-bind="activePage"></h1> -->
     <p ng-repeat="verses in activePage.verses" ng-bind-html="verses.verse | parseHTML"></p>
